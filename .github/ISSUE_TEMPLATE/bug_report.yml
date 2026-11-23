@@ -1,0 +1,44 @@
+name: Bug report
+description: Something scanned wrongly, crashed, or returned the wrong spans.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please do not paste real secrets or personal data:
+        replace them with obviously fake values of the same shape.
+  - type: input
+    id: version
+    attributes:
+      label: guardrails-lite version
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.12.10"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command or code
+      description: The full command line or the smallest Python snippet that reproduces it.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Paste the output, including the exit code.
+    validations:
+      required: true

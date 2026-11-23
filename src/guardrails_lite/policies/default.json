@@ -1,0 +1,25 @@
+{
+  "name": "default",
+  "description": "Balanced defaults: redact PII, block credentials and prompt injection, drop <0.5 confidence.",
+  "min_severity": "info",
+  "salt": "guardrails-lite",
+  "custom": [
+    {
+      "id": "cn_phone_landline",
+      "pattern": "(?<!\\d)0\\d{2,3}-\\d{7,8}(?!\\d)",
+      "severity": "medium",
+      "action": "redact",
+      "name": "CN landline number",
+      "description": "Area code plus 7-8 digit landline, e.g. 010-12345678."
+    },
+    {
+      "id": "internal_ticket",
+      "pattern": "OPS-\\d{6}",
+      "severity": "low",
+      "action": "flag",
+      "name": "Internal ops ticket",
+      "description": "Flags internal ticket ids so they are not forwarded verbatim."
+    }
+  ],
+  "min_score": 0.5
+}

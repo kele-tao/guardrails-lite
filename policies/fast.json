@@ -1,0 +1,13 @@
+{
+  "name": "fast",
+  "description": "Drops the three costliest whole-document detectors for high-volume ingestion. Use default when token flooding matters.",
+  "min_severity": "info",
+  "salt": "guardrails-lite",
+  "detectors": {
+    "disable": [
+      "repeated_content",
+      "mac_address",
+      "ipv4_network"
+    ]
+  }
+}

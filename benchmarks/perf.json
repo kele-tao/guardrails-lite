@@ -1,0 +1,37 @@
+{
+  "note": "medians of 5 runs on a 5 MB synthetic document; machine-specific",
+  "policies": [
+    {
+      "policy": "default",
+      "detectors": 29,
+      "mb": 4.629,
+      "seconds_median": 2.8222,
+      "seconds_min": 1.5996,
+      "mb_per_s": 1.64
+    },
+    {
+      "policy": "fast",
+      "detectors": 26,
+      "mb": 4.629,
+      "seconds_median": 2.4413,
+      "seconds_min": 2.335,
+      "mb_per_s": 1.9
+    }
+  ],
+  "streaming": [
+    {
+      "mb": 0.925,
+      "chunk_size": 8192,
+      "chunks": 119,
+      "batch_seconds": 0.8329,
+      "stream_seconds": 1.1045,
+      "overhead_x": 1.33,
+      "findings_batch": 73,
+      "findings_stream": 91,
+      "entity_findings": 48,
+      "identical_entity_spans": true,
+      "context_findings_batch": 25,
+      "context_findings_stream": 43
+    }
+  ]
+}

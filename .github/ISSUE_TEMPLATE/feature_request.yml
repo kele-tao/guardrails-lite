@@ -1,0 +1,35 @@
+name: Feature request
+description: A detector, policy feature or integration you would like to see.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe the application and the failure mode you need to block.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+    validations:
+      required: true
+  - type: textarea
+    id: sample
+    attributes:
+      label: Sample input
+      description: A fake-but-realistic example that should be caught (or must not be).
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Which part?
+      options:
+        - New detector
+        - Policy engine
+        - Redaction
+        - CLI
+        - Benchmark corpus
+        - Documentation
+    validations:
+      required: true

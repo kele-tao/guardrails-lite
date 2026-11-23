@@ -1,0 +1,24 @@
+{
+  "name": "strict",
+  "description": "Zero tolerance for credentials; only high-severity findings survive.",
+  "min_severity": "medium",
+  "min_score": 0.6,
+  "salt": "strict-demo-salt",
+  "actions": {
+    "email": "redact",
+    "phone": "redact",
+    "ipv4": "flag",
+    "repeated_content": "block",
+    "invisible_unicode": "block"
+  },
+  "allowlist": [
+    {
+      "detector": "ipv4",
+      "pattern": "^(?:10\\.|127\\.|192\\.168\\.)"
+    },
+    {
+      "detector": "email",
+      "value": "noreply@example.com"
+    }
+  ]
+}
