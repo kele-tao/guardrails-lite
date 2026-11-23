@@ -1,5 +1,7 @@
 # guardrails-lite
 
+**English** | [简体中文](README.zh-CN.md)
+
 **Stop prompt injection and PII leaks in one function call — 29 detectors, exact character spans, stable redaction tokens, zero dependencies.**
 
 [![ci](https://github.com/kele-tao/guardrails-lite/actions/workflows/ci.yml/badge.svg)](https://github.com/kele-tao/guardrails-lite/actions/workflows/ci.yml)
