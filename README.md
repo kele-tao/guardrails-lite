@@ -363,6 +363,8 @@ committed as `benchmarks/corpus.jsonl`. Numbers below come from
 
 precision **0.972**, recall **0.886**, F1 **0.927**, accuracy **0.889**.
 
+![guardrails-lite bench output](docs/screenshot-bench.png)
+
 | family | samples | caught | missed | false pos | recall |
 | --- | --- | --- | --- | --- | --- |
 | api_keys | 7 | 7 | 0 | 0 | 100% |
